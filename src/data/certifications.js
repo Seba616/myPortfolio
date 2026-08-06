@@ -1,0 +1,81 @@
+export const certifications = [
+  {
+    id: 1,
+    title: "Certificado en Arquitectura Cloud",
+    hours: "198 horas",
+    subjects: [
+      { name: "Redes de Datos", hours: "54 horas" },
+      { name: "Seguridad de la Información", hours: "72 horas" },
+      { name: "Tecnología Cloud", hours: "72 horas" },
+    ],
+    image: null,
+    pdf: "certifications/arquitecturaCloud.pdf",
+  },
+  {
+    id: 2,
+    title: "Certificado en Soporte Computacional",
+    institution: "INACAP",
+    hours: "126 horas",
+    subjects: [
+      { name: "Fundamentos de Hardware y Software", hours: "72 horas" },
+      { name: "Sistemas Operativos", hours: "54 horas" },
+    ],
+    image: null,
+    pdf: "certifications/soporteComputacional.pdf",
+  },
+  {
+    id: 3,
+    title: "Certificado en Diseño Ágil de Sistemas",
+    institution: "INACAP",
+    hours: "126 horas",
+    subjects: [
+      { name: "Desarrollo Ágil", hours: "54 horas" },
+      { name: "Diseño de Sistemas", hours: "72 horas" },
+    ],
+    image: null,
+    pdf: "certifications/disenoAgilDeSistemas.pdf",
+  },
+  {
+    id: 4,
+    title: "Certificado en Diseño y Gestión de Base de Datos",
+    institution: "INACAP",
+    hours: "126 horas",
+    subjects: [
+      { name: "Bases de Datos No Estructuradas", hours: "72 horas" },
+      { name: "Fundamentos de Base de Datos", hours: "54 horas" },
+    ],
+    image: null,
+    pdf: "certifications/diseñoGestionBDD.pdf",
+  },
+  {
+    id: 5,
+    title: "Certificado en Desarrollo de Aplicaciones Básicas",
+    institution: "INACAP",
+    hours: "162 horas",
+    subjects: [
+      { name: "Introducción a la Programación", hours: "90 horas" },
+      { name: "Programación Orientada a Objeto", hours: "72 horas" },
+    ],
+    image: null,
+    pdf: "certifications/desarrolloAplicaciones.pdf",
+  },
+  {
+    id: 6,
+    title: "Certificado en Desarrollador Full Stack",
+    institution: "INACAP",
+    hours: "162 horas",
+    subjects: [
+      { name: "Programación Back End", hours: "72 horas" },
+      { name: "Programación Front End", hours: "90 horas" },
+    ],
+    image: null,
+    pdf: "certifications/desarrolloFullStack.pdf",
+  },
+  {
+    id: 7,
+    title: "English Score Certificate",
+    institution: "British Council",
+    image: null,
+    pdf: "certifications/englishScore.pdf",
+  },
+];
