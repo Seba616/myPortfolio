@@ -2,6 +2,7 @@ export const certifications = [
   {
     id: 1,
     title: "Certificado en Arquitectura Cloud",
+    institution: "INACAP",
     hours: "198 horas",
     subjects: [
       { name: "Redes de Datos", hours: "54 horas" },
@@ -77,5 +78,19 @@ export const certifications = [
     institution: "British Council",
     image: null,
     pdf: "certifications/englishScore.pdf",
+  },
+  {
+    id: 8,
+    title: "Cursor con Python",
+    institution: "Santander Open Academy",
+    image: null,
+    pdf: "certifications/CursorAndPython.pdf",
+  },
+  {
+    id: 9,
+    title: "AWS Academy Cloud Foundations",
+    institution: "Amazon Web Services",
+    image: null,
+    pdf: "certifications/IntrotoDataScience.pdf",
   },
 ];

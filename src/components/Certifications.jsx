@@ -32,10 +32,12 @@ function Certifications() {
       id="certifications"
       className="py-8 px-6 max-w-2xl mx-auto text-black dark:text-white"
     >
-      <h2 className="text-2xl font-bold mb-4">Certificaciones</h2>
+      <h2 className="text-2xl font-bold mb-4">
+        Certificaciones ({certifications.length})
+      </h2>
 
       {certifications.length === 0 ? (
-        <p className="text-neutral-500 italic">Próximamente...</p>
+        <p className="text-neutral-500 italic"></p>
       ) : (
         <div className="flex flex-col items-center">
           <div className="overflow-hidden w-full" ref={emblaRef}>
