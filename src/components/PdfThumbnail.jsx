@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import * as pdfjsLib from "pdfjs-dist";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
+import { Award } from "lucide-react";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
 function PdfThumbnail({ src, alt }) {
   const canvasRef = useRef(null);
-  const [loaded, setLoaded] = useState(false);
+  const [status, setStatus] = useState("loading"); // loading | ready | error
 
   useEffect(() => {
     let cancelled = false;
@@ -30,9 +31,10 @@ function PdfThumbnail({ src, alt }) {
         await page.render({ canvasContext: ctx, viewport: scaledViewport })
           .promise;
 
-        if (!cancelled) setLoaded(true);
+        if (!cancelled) setStatus("ready");
       } catch (err) {
         console.error("Error al generar miniatura del PDF:", err);
+        if (!cancelled) setStatus("error");
       }
     }
 
@@ -43,12 +45,20 @@ function PdfThumbnail({ src, alt }) {
     };
   }, [src]);
 
+  if (status === "error") {
+    return (
+      <div className="w-full h-full flex items-center justify-center">
+        <Award size={40} className="text-neutral-300 dark:text-neutral-700" />
+      </div>
+    );
+  }
+
   return (
     <canvas
       ref={canvasRef}
       aria-label={alt}
       className={`w-full h-full object-cover object-top transition-opacity ${
-        loaded ? "opacity-100" : "opacity-0"
+        status === "ready" ? "opacity-100" : "opacity-0"
       }`}
     />
   );
