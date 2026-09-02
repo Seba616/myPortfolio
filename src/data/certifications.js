@@ -93,4 +93,11 @@ export const certifications = [
     image: null,
     pdf: "certifications/IntrotoDataScience.pdf",
   },
+  {
+    id: 10,
+    title: "Claude in Action",
+    institution: "Anthropic",
+    image: null,
+    pdf: "certifications/claudeInAction.pdf",
+  },
 ];
