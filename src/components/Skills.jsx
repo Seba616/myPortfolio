@@ -8,6 +8,8 @@ import {
   SiMysql,
   SiMongodb,
   SiDjango,
+  SiR,
+  SiKnime,
 } from "react-icons/si";
 
 function Skills() {
@@ -21,6 +23,8 @@ function Skills() {
     { name: "SQL", icon: SiMysql, color: "#4479A1" },
     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
     { name: "Django", icon: SiDjango, color: "#092E20" },
+    { name: "R", icon: SiR, color: "#276DC3" },
+    { name: "KNIME", icon: SiKnime, color: "#F7B500" },
   ];
 
   return (
